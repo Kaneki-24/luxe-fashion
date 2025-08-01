@@ -86,7 +86,7 @@ const Login = () => {
       <Header />
       <main className="flex-1 flex items-center justify-center py-12 px-4">
         <div className="w-full max-w-md bg-card rounded-lg shadow-lg p-8">
-          <h2 className="text-2xl font-serif font-semibold text-foreground mb-6 text-center">Sign in to Luxe</h2>
+          <h2 className="text-2xl font-serif font-semibold text-foreground mb-6 text-center">Sign in to 9tytwo</h2>
           <form className="space-y-5" onSubmit={handleLogin}>
             <Input
               label="Email"
