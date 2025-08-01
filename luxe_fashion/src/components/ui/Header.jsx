@@ -245,19 +245,29 @@ const Header = () => {
             <Button
               variant="ghost"
               size="icon"
-              className="text-muted-foreground hover:text-foreground"
+              className="text-muted-foreground hover:text-accent hover:bg-accent/10 transition-all duration-300 rounded-full group"
+              onClick={() => setSearchOpen(true)}
             >
-              <Icon name="Search" size={20} />
+              <Icon name="Search" size={20} className="group-hover:scale-110 transition-transform duration-300" />
             </Button>
             <Button
               variant="ghost"
               size="icon"
-              className="text-muted-foreground hover:text-foreground relative"
+              className="text-muted-foreground hover:text-accent hover:bg-accent/10 transition-all duration-300 rounded-full relative group"
+              onClick={() => {
+                if (user) {
+                  navigate('/checkout-experience');
+                } else {
+                  navigate('/login');
+                }
+              }}
             >
-              <Icon name="ShoppingBag" size={20} />
-              <span className="absolute -top-1 -right-1 w-4 h-4 bg-accent text-accent-foreground text-xs rounded-full flex items-center justify-center">
-                2
-              </span>
+              <Icon name="ShoppingBag" size={20} className="group-hover:scale-110 transition-transform duration-300" />
+              {cart.length > 0 && (
+                <span className="absolute -top-1 -right-1 w-5 h-5 bg-gradient-to-r from-accent to-amber-400 text-white text-xs rounded-full flex items-center justify-center font-semibold shadow-lg animate-pulse">
+                  {cart.length}
+                </span>
+              )}
             </Button>
             <Button
               variant="ghost"
@@ -321,8 +331,21 @@ const Header = () => {
                   <Icon name="User" size={18} />
                   <span>Account</span>
                 </Button>
+                {user && (
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  className="flex items-center space-x-2 text-muted-foreground hover:text-foreground"
+                  onClick={() => {
+                    navigate('/admin');
+                    closeMenu();
+                  }}
+                >
+                  <Icon name="Settings" size={18} />
+                  <span>Admin Panel</span>
+                </Button>
+              )}
               </div>
-
             </div>
           </div>
         </div>
