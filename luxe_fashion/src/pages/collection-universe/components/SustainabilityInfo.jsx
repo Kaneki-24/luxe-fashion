@@ -30,8 +30,6 @@ const SustainabilityInfo = () => {
     }
   ];
 
-  
-
   return (
     <div className="bg-card py-16 lg:py-24">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -40,7 +38,7 @@ const SustainabilityInfo = () => {
             <Icon name="Leaf" size={16} />
             <span className="text-sm font-medium">Sustainability Commitment</span>
           </div>
-          
+
           <h2 className="text-3xl lg:text-4xl font-serif font-bold text-foreground mb-4">
             Fashion with Purpose
           </h2>
@@ -56,12 +54,12 @@ const SustainabilityInfo = () => {
               <div className="w-16 h-16 bg-success/10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Icon name={feature.icon} size={24} className="text-success" />
               </div>
-              
+
               <h3 className="font-semibold text-foreground mb-2">{feature.title}</h3>
               <p className="text-sm text-muted-foreground mb-4">{feature.description}</p>
-              
+
               <div className="w-full bg-muted rounded-full h-2 mb-2">
-                <div 
+                <div
                   className="bg-success h-2 rounded-full transition-all duration-1000"
                   style={{ width: `${feature.percentage}%` }}
                 />
@@ -172,25 +170,6 @@ const SustainabilityInfo = () => {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-
-        {/* Certifications */}
-        <div className="text-center mb-12">
-          <h3 className="text-xl font-semibold text-foreground mb-8">Our Certifications</h3>
-          
-          <div className="flex flex-wrap justify-center items-center gap-8">
-            {certifications.map((cert, index) => (
-              <div key={index} className="flex items-center space-x-3 bg-background rounded-lg p-4 border border-border">
-                <div className="w-12 h-12 bg-muted rounded-lg flex items-center justify-center">
-                  <Icon name="Award" size={20} className="text-accent" />
-                </div>
-                <div className="text-left">
-                  <div className="font-medium text-foreground">{cert.name}</div>
-                  <div className="text-sm text-muted-foreground">{cert.description}</div>
-                </div>
-              </div>
-            ))}
           </div>
         </div>
 
