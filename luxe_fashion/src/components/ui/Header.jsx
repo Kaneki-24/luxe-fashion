@@ -19,7 +19,6 @@ const Header = () => {
   const navigationItems = [
     { name: 'Home', path: '/homepage', icon: 'Home' },
     { name: 'Collections', path: '/collection-universe', icon: 'Grid3X3' },
-    { name: 'Product', path: '/product', icon: 'Package' },
     { name: 'Checkout', path: '/checkout-experience', icon: 'ShoppingBag' }
   ];
 
