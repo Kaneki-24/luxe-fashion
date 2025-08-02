@@ -25,7 +25,6 @@ const Footer = () => {
     {
       title: "Support",
       links: [
-        { name: "Size Guide", path: "/collection-universe" },
         { name: "Care Instructions", path: "/collection-universe" },
         { name: "Returns & Exchanges", path: "/collection-universe" },
         { name: "Contact Us", path: "/collection-universe" }
