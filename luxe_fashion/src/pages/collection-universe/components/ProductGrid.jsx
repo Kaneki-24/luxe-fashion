@@ -28,8 +28,8 @@ const ProductGrid = ({ products, viewMode, sortBy }) => {
   const displayedProducts = sortedProducts.slice(0, visibleProducts);
 
   const gridClasses = {
-    grid: 'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6',
-    masonry: 'columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-6 space-y-6',
+    grid: 'grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6',
+    masonry: 'columns-2 sm:columns-2 lg:columns-3 xl:columns-4 gap-6 space-y-6',
     list: 'space-y-6'
   };
 
@@ -44,9 +44,9 @@ const ProductGrid = ({ products, viewMode, sortBy }) => {
   }
 
   return (
-    <div className="space-y-8">
+    <div>
       {/* Results Count */}
-      <div className="flex items-center justify-between">
+      <div className="flex items-center justify-between mb-4">
         <p className="text-muted-foreground">
           Showing {displayedProducts.length} of {products.length} products
         </p>
