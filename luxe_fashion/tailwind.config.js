@@ -85,10 +85,10 @@ export default {
         'cute': '1.25rem',
       },
       fontFamily: {
-        sans: ["Inter", "ui-sans-serif", "system-ui"],
-        serif: ["var(--font-serif)", "Merriweather", "Georgia", "serif"],
-        display: ["var(--font-display)", "Playfair Display", "Georgia", "serif"],
-        italic: ["var(--font-italic)", "Crimson Text", "Georgia", "serif"],
+        sans: ["Athiti", "ui-sans-serif", "system-ui"],
+        serif: ["Athiti", "Georgia", "serif"],
+        display: ["Athiti", "ui-sans-serif", "system-ui"],
+        italic: ["Athiti", "ui-sans-serif", "system-ui"],
       },
       fontSize: {
         'xs': ['0.75rem', { lineHeight: '1rem' }],
