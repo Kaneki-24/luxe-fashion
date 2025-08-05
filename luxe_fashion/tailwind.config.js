@@ -20,7 +20,7 @@ export default {
       colors: {
         border: "var(--color-border)", /* light-gray */
         input: "var(--color-input)", /* white */
-        ring: "var(--color-ring)", /* muted-gold */
+        ring: "var(--color-ring)", /* teal-mint */
         background: "var(--color-background)", /* warm-white */
         foreground: "var(--color-foreground)", /* rich-black */
         primary: {
@@ -32,7 +32,7 @@ export default {
           foreground: "var(--color-secondary-foreground)", /* white */
         },
         destructive: {
-          DEFAULT: "var(--color-destructive)", /* muted-burgundy */
+          DEFAULT: "var(--color-destructive)", /* red */
           foreground: "var(--color-destructive-foreground)", /* white */
         },
         muted: {
@@ -40,8 +40,8 @@ export default {
           foreground: "var(--color-muted-foreground)", /* medium-gray */
         },
         accent: {
-          DEFAULT: "var(--color-accent)", /* muted-gold */
-          foreground: "var(--color-accent-foreground)", /* rich-black */
+          DEFAULT: "var(--color-accent)", /* teal-mint */
+          foreground: "var(--color-accent-foreground)", /* white */
         },
         popover: {
           DEFAULT: "var(--color-popover)", /* pure-white */
@@ -52,24 +52,26 @@ export default {
           foreground: "var(--color-card-foreground)", /* rich-black */
         },
         success: {
-          DEFAULT: "var(--color-success)", /* sage-green */
+          DEFAULT: "var(--color-success)", /* teal-mint */
           foreground: "var(--color-success-foreground)", /* white */
         },
         warning: {
-          DEFAULT: "var(--color-warning)", /* warm-amber */
+          DEFAULT: "var(--color-warning)", /* amber */
           foreground: "var(--color-warning-foreground)", /* white */
         },
         error: {
-          DEFAULT: "var(--color-error)", /* muted-burgundy */
+          DEFAULT: "var(--color-error)", /* red */
           foreground: "var(--color-error-foreground)", /* white */
         },
         surface: "var(--color-surface)", /* subtle-depth */
+        // Updated pastel colors to complement the new teal theme
         pastelPink: '#FFD1DC',
         pastelYellow: '#FFFACD',
         pastelBlue: '#B5E3FF',
         pastelGreen: '#C1F7C7',
         pastelPurple: '#E0BBE4',
-        accent: '#FFB6B9',
+        pastelTeal: '#A8E6CF', // New teal pastel to complement the main color
+        brand: '#44D7A8', // Direct access to the brand color
       },
       borderRadius: {
         lg: "var(--radius-lg)",
@@ -130,7 +132,8 @@ export default {
         'none': 'var(--shadow-none)',
         'card': 'var(--elevation-card)',
         'modal': 'var(--elevation-modal)',
-        'cute': '0 4px 24px 0 rgba(255, 209, 220, 0.15)',
+        'teal': '0 4px 24px 0 rgba(68, 215, 168, 0.15)', // Updated to use the new teal color
+        'brand': '0 4px 24px 0 rgba(68, 215, 168, 0.15)', // Brand shadow with the new color
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
