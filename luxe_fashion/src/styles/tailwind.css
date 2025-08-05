@@ -21,24 +21,24 @@
     --color-secondary: #8B8B8B; /* refined-gray */
     --color-secondary-foreground: #FFFFFF; /* white */
 
-    /* Accent Colors */
-    --color-accent: #D4AF37; /* muted-gold */
-    --color-accent-foreground: #1A1A1A; /* rich-black */
+    /* Accent Colors - Updated to #44D7A8 theme */
+    --color-accent: #44D7A8; /* teal-mint */
+    --color-accent-foreground: #FFFFFF; /* white */
 
-    /* State Colors */
-    --color-success: #7A9B76; /* sage-green */
+    /* State Colors - Updated to complement #44D7A8 */
+    --color-success: #44D7A8; /* teal-mint - same as accent */
     --color-success-foreground: #FFFFFF; /* white */
-    --color-warning: #B8860B; /* warm-amber */
+    --color-warning: #F59E0B; /* amber */
     --color-warning-foreground: #FFFFFF; /* white */
-    --color-error: #8B4B4B; /* muted-burgundy */
+    --color-error: #EF4444; /* red */
     --color-error-foreground: #FFFFFF; /* white */
-    --color-destructive: #8B4B4B; /* muted-burgundy */
+    --color-destructive: #EF4444; /* red */
     --color-destructive-foreground: #FFFFFF; /* white */
 
     /* UI Elements */
     --color-border: #E5E5E5; /* light-gray */
     --color-input: #FFFFFF; /* white */
-    --color-ring: #D4AF37; /* muted-gold */
+    --color-ring: #44D7A8; /* teal-mint */
 
     /* Surface Colors */
     --color-surface: #F8F8F8; /* subtle-depth */
@@ -121,12 +121,12 @@
     box-shadow: var(--elevation-modal);
   }
 
-  .text-gradient-gold {
-    @apply bg-gradient-to-r from-accent to-amber-400 bg-clip-text text-transparent;
+  .text-gradient-teal {
+    @apply bg-gradient-to-r from-accent to-emerald-400 bg-clip-text text-transparent;
   }
 
   .text-gradient-brand {
-    @apply bg-gradient-to-r from-accent via-amber-400 to-accent bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-accent via-emerald-400 to-accent bg-clip-text text-transparent;
   }
 
   .smooth-transition {
@@ -138,11 +138,11 @@
   }
 
   .brand-glow {
-    box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+    box-shadow: 0 0 20px rgba(68, 215, 168, 0.3);
   }
 
   .brand-glow-hover:hover {
-    box-shadow: 0 0 30px rgba(212, 175, 55, 0.5);
+    box-shadow: 0 0 30px rgba(68, 215, 168, 0.5);
   }
 
   .backdrop-blur-luxury {
@@ -219,7 +219,7 @@
   }
 }
 
-/* Custom Keyframes for 9tyTwo Brand */
+/* Custom Keyframes for Updated Brand */
 @keyframes float {
   0%, 100% {
     transform: translateY(0px);
@@ -231,10 +231,10 @@
 
 @keyframes glow {
   from {
-    box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+    box-shadow: 0 0 20px rgba(68, 215, 168, 0.3);
   }
   to {
-    box-shadow: 0 0 30px rgba(212, 175, 55, 0.6);
+    box-shadow: 0 0 30px rgba(68, 215, 168, 0.6);
   }
 }
 
