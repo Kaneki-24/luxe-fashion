@@ -85,10 +85,10 @@ export default {
         'cute': '1.25rem',
       },
       fontFamily: {
-        sans: ["Athiti", "ui-sans-serif", "system-ui"],
-        serif: ["Athiti", "Georgia", "serif"],
-        display: ["Athiti", "ui-sans-serif", "system-ui"],
-        italic: ["Athiti", "ui-sans-serif", "system-ui"],
+        sans: ["Gruppo", "ui-sans-serif", "system-ui"],
+        serif: ["Gruppo", "Georgia", "serif"],
+        display: ["Gruppo", "ui-sans-serif", "system-ui"],
+        italic: ["Gruppo", "Georgia", "serif"],
       },
       fontSize: {
         'xs': ['0.75rem', { lineHeight: '1rem' }],
