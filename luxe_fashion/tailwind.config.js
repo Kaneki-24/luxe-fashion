@@ -20,7 +20,7 @@ export default {
       colors: {
         border: "var(--color-border)", /* light-gray */
         input: "var(--color-input)", /* white */
-        ring: "var(--color-ring)", /* teal-mint */
+        ring: "var(--color-ring)", /* sage-green */
         background: "var(--color-background)", /* warm-white */
         foreground: "var(--color-foreground)", /* rich-black */
         primary: {
@@ -40,7 +40,7 @@ export default {
           foreground: "var(--color-muted-foreground)", /* medium-gray */
         },
         accent: {
-          DEFAULT: "var(--color-accent)", /* teal-mint */
+          DEFAULT: "var(--color-accent)", /* sage-green */
           foreground: "var(--color-accent-foreground)", /* white */
         },
         popover: {
@@ -52,7 +52,7 @@ export default {
           foreground: "var(--color-card-foreground)", /* rich-black */
         },
         success: {
-          DEFAULT: "var(--color-success)", /* teal-mint */
+          DEFAULT: "var(--color-success)", /* sage-green */
           foreground: "var(--color-success-foreground)", /* white */
         },
         warning: {
@@ -64,14 +64,14 @@ export default {
           foreground: "var(--color-error-foreground)", /* white */
         },
         surface: "var(--color-surface)", /* subtle-depth */
-        // Updated pastel colors to complement the new teal theme
+        // Updated pastel colors to complement the new sage green theme
         pastelPink: '#FFD1DC',
         pastelYellow: '#FFFACD',
         pastelBlue: '#B5E3FF',
         pastelGreen: '#C1F7C7',
         pastelPurple: '#E0BBE4',
-        pastelTeal: '#A8E6CF', // New teal pastel to complement the main color
-        brand: '#44D7A8', // Direct access to the brand color
+        pastelSage: '#B8C9A8', // New sage pastel to complement the main color
+        brand: '#92b174', // Direct access to the brand color
       },
       borderRadius: {
         lg: "var(--radius-lg)",
@@ -132,8 +132,8 @@ export default {
         'none': 'var(--shadow-none)',
         'card': 'var(--elevation-card)',
         'modal': 'var(--elevation-modal)',
-        'teal': '0 4px 24px 0 rgba(68, 215, 168, 0.15)', // Updated to use the new teal color
-        'brand': '0 4px 24px 0 rgba(68, 215, 168, 0.15)', // Brand shadow with the new color
+        'sage': '0 4px 24px 0 rgba(146, 177, 116, 0.15)', // Updated to use the new sage green color
+        'brand': '0 4px 24px 0 rgba(146, 177, 116, 0.15)', // Brand shadow with the new color
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
