@@ -7,6 +7,8 @@ import Button from '../../../components/ui/Button';
 const HeroSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+  const [touchStart, setTouchStart] = useState(null);
+  const [touchEnd, setTouchEnd] = useState(null);
 
   const heroSlides = [
     {
@@ -69,8 +71,40 @@ const HeroSection = () => {
     setTimeout(() => setIsAutoPlaying(true), 10000);
   };
 
+  // Touch event handlers
+  const handleTouchStart = (e) => {
+    setTouchEnd(null);
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchMove = (e) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+    
+    const distance = touchStart - touchEnd;
+    const minSwipeDistance = 50;
+
+    if (Math.abs(distance) < minSwipeDistance) return;
+
+    if (distance > minSwipeDistance) {
+      // Swipe left - go to next slide
+      nextSlide();
+    } else if (distance < -minSwipeDistance) {
+      // Swipe right - go to previous slide
+      prevSlide();
+    }
+  };
+
   return (
-    <section className="relative h-screen overflow-hidden bg-background">
+    <section 
+      className="relative h-screen overflow-hidden bg-background"
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}
+    >
       {/* Hero Slides */}
       <div className="relative w-full h-full">
         {heroSlides.map((slide, index) => (
@@ -158,10 +192,10 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* Enhanced Arrow Controls */}
+      {/* Arrow Controls - Hidden on mobile, visible on desktop */}
       <button
         onClick={prevSlide}
-        className="absolute left-6 top-1/2 transform -translate-y-1/2 z-20 w-14 h-14 bg-gradient-to-r from-accent/20 to-amber-400/20 backdrop-blur-md rounded-full flex items-center justify-center text-white hover:from-accent/30 hover:to-amber-400/30 transition-all duration-300 border border-white/20 group"
+        className="absolute left-6 top-1/2 transform -translate-y-1/2 z-20 w-14 h-14 bg-gradient-to-r from-accent/20 to-amber-400/20 backdrop-blur-md rounded-full items-center justify-center text-white hover:from-accent/30 hover:to-amber-400/30 transition-all duration-300 border border-white/20 group hidden md:flex"
         aria-label="Previous slide"
       >
         <Icon name="ChevronLeft" size={28} className="group-hover:-translate-x-1 transition-transform duration-300" />
@@ -169,7 +203,7 @@ const HeroSection = () => {
 
       <button
         onClick={nextSlide}
-        className="absolute right-6 top-1/2 transform -translate-y-1/2 z-20 w-14 h-14 bg-gradient-to-r from-accent/20 to-amber-400/20 backdrop-blur-md rounded-full flex items-center justify-center text-white hover:from-accent/30 hover:to-amber-400/30 transition-all duration-300 border border-white/20 group"
+        className="absolute right-6 top-1/2 transform -translate-y-1/2 z-20 w-14 h-14 bg-gradient-to-r from-accent/20 to-amber-400/20 backdrop-blur-md rounded-full items-center justify-center text-white hover:from-accent/30 hover:to-amber-400/30 transition-all duration-300 border border-white/20 group hidden md:flex"
         aria-label="Next slide"
       >
         <Icon name="ChevronRight" size={28} className="group-hover:translate-x-1 transition-transform duration-300" />
@@ -191,6 +225,15 @@ const HeroSection = () => {
       <div className="absolute top-1/4 right-8 z-10 opacity-10">
         <div className="text-9xl font-display font-bold text-white transform rotate-90 select-none">
           9tyTwo
+        </div>
+      </div>
+
+      {/* Touch Indicator for Mobile - shows briefly on mobile */}
+      <div className="absolute top-1/2 left-4 transform -translate-y-1/2 z-10 md:hidden">
+        <div className="flex items-center space-x-2 text-white/60 bg-black/20 backdrop-blur-sm px-3 py-2 rounded-full animate-pulse">
+          <Icon name="ChevronLeft" size={16} />
+          <span className="text-xs font-medium">Swipe</span>
+          <Icon name="ChevronRight" size={16} />
         </div>
       </div>
     </section>
