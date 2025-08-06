@@ -231,9 +231,7 @@ const HeroSection = () => {
       {/* Touch Indicator for Mobile - shows briefly on mobile */}
       <div className="absolute top-1/2 left-4 transform -translate-y-1/2 z-10 md:hidden">
         <div className="flex items-center space-x-2 text-white/60 bg-black/20 backdrop-blur-sm px-3 py-2 rounded-full animate-pulse">
-          <Icon name="ChevronLeft" size={16} />
-          <span className="text-xs font-medium">Swipe</span>
-          <Icon name="ChevronRight" size={16} />
+          
         </div>
       </div>
     </section>
