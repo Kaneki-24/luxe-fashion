@@ -21,12 +21,12 @@
     --color-secondary: #8B8B8B; /* refined-gray */
     --color-secondary-foreground: #FFFFFF; /* white */
 
-    /* Accent Colors - Updated to #44D7A8 theme */
-    --color-accent: #44D7A8; /* teal-mint */
+    /* Accent Colors - Updated to #92b174 theme */
+    --color-accent: #92b174; /* sage-green */
     --color-accent-foreground: #FFFFFF; /* white */
 
-    /* State Colors - Updated to complement #44D7A8 */
-    --color-success: #44D7A8; /* teal-mint - same as accent */
+    /* State Colors - Updated to complement #92b174 */
+    --color-success: #92b174; /* sage-green - same as accent */
     --color-success-foreground: #FFFFFF; /* white */
     --color-warning: #F59E0B; /* amber */
     --color-warning-foreground: #FFFFFF; /* white */
@@ -38,7 +38,7 @@
     /* UI Elements */
     --color-border: #E5E5E5; /* light-gray */
     --color-input: #FFFFFF; /* white */
-    --color-ring: #44D7A8; /* teal-mint */
+    --color-ring: #92b174; /* sage-green */
 
     /* Surface Colors */
     --color-surface: #F8F8F8; /* subtle-depth */
@@ -121,12 +121,12 @@
     box-shadow: var(--elevation-modal);
   }
 
-  .text-gradient-teal {
-    @apply bg-gradient-to-r from-accent to-emerald-400 bg-clip-text text-transparent;
+  .text-gradient-sage {
+    @apply bg-gradient-to-r from-accent to-green-500 bg-clip-text text-transparent;
   }
 
   .text-gradient-brand {
-    @apply bg-gradient-to-r from-accent via-emerald-400 to-accent bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-accent via-green-500 to-accent bg-clip-text text-transparent;
   }
 
   .smooth-transition {
@@ -138,11 +138,11 @@
   }
 
   .brand-glow {
-    box-shadow: 0 0 20px rgba(68, 215, 168, 0.3);
+    box-shadow: 0 0 20px rgba(146, 177, 116, 0.3);
   }
 
   .brand-glow-hover:hover {
-    box-shadow: 0 0 30px rgba(68, 215, 168, 0.5);
+    box-shadow: 0 0 30px rgba(146, 177, 116, 0.5);
   }
 
   .backdrop-blur-luxury {
@@ -231,10 +231,10 @@
 
 @keyframes glow {
   from {
-    box-shadow: 0 0 20px rgba(68, 215, 168, 0.3);
+    box-shadow: 0 0 20px rgba(146, 177, 116, 0.3);
   }
   to {
-    box-shadow: 0 0 30px rgba(68, 215, 168, 0.6);
+    box-shadow: 0 0 30px rgba(146, 177, 116, 0.6);
   }
 }
 
