@@ -130,7 +130,7 @@ const HeroSection = () => {
                 <div className="max-w-3xl">
                   <div className="space-y-8 text-white">
                     {/* Accent Badge */}
-                    <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-accent/20 to-amber-400/20 backdrop-blur-sm rounded-full border border-accent/30">
+                    <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-accent/20 to-[#92b174]/20 backdrop-blur-sm rounded-full border border-accent/30">
                       <span className="text-sm font-medium tracking-wider uppercase text-accent">
                         {slide.accent}
                       </span>
@@ -158,7 +158,7 @@ const HeroSection = () => {
                         <Button
                           variant="default"
                           size="lg"
-                          className="bg-gradient-to-r from-accent to-amber-400 text-black hover:from-accent/90 hover:to-amber-400/90 px-8 py-4 text-lg font-semibold shadow-xl hover:shadow-2xl transition-all duration-300 group"
+                          className="bg-gradient-to-r from-accent to-[#92b174] text-black hover:from-accent/90 hover:to-[#92b174]0/90 px-8 py-4 text-lg font-semibold shadow-xl hover:shadow-2xl transition-all duration-300 group"
                         >
                           {slide.cta}
                           <Icon name="ArrowRight" size={24} className="ml-3 group-hover:translate-x-1 transition-transform duration-300" />
@@ -183,7 +183,7 @@ const HeroSection = () => {
               onClick={() => goToSlide(index)}
               className={`w-4 h-4 rounded-full transition-all duration-500 ${
                 index === currentSlide
-                  ? 'bg-gradient-to-r from-accent to-amber-400 scale-125 shadow-lg'
+                  ? 'bg-gradient-to-r from-accent to-[#92b174] scale-125 shadow-lg'
                   : 'bg-white/40 hover:bg-white/70 hover:scale-110'
               }`}
               aria-label={`Go to slide ${index + 1}`}
@@ -195,7 +195,7 @@ const HeroSection = () => {
       {/* Arrow Controls - Hidden on mobile, visible on desktop */}
       <button
         onClick={prevSlide}
-        className="absolute left-6 top-1/2 transform -translate-y-1/2 z-20 w-14 h-14 bg-gradient-to-r from-accent/20 to-amber-400/20 backdrop-blur-md rounded-full items-center justify-center text-white hover:from-accent/30 hover:to-amber-400/30 transition-all duration-300 border border-white/20 group hidden md:flex"
+        className="absolute left-6 top-1/2 transform -translate-y-1/2 z-20 w-14 h-14 bg-gradient-to-r from-accent/20 to-[#92b174]/20 backdrop-blur-md rounded-full items-center justify-center text-white hover:from-accent/30 hover:to-amber-400/30 transition-all duration-300 border border-white/20 group hidden md:flex"
         aria-label="Previous slide"
       >
         <Icon name="ChevronLeft" size={28} className="group-hover:-translate-x-1 transition-transform duration-300" />
@@ -203,7 +203,7 @@ const HeroSection = () => {
 
       <button
         onClick={nextSlide}
-        className="absolute right-6 top-1/2 transform -translate-y-1/2 z-20 w-14 h-14 bg-gradient-to-r from-accent/20 to-amber-400/20 backdrop-blur-md rounded-full items-center justify-center text-white hover:from-accent/30 hover:to-amber-400/30 transition-all duration-300 border border-white/20 group hidden md:flex"
+        className="absolute right-6 top-1/2 transform -translate-y-1/2 z-20 w-14 h-14 bg-gradient-to-r from-accent/20 to-[#92b174]/20 backdrop-blur-md rounded-full items-center justify-center text-white hover:from-accent/30 hover:to-amber-400/30 transition-all duration-300 border border-white/20 group hidden md:flex"
         aria-label="Next slide"
       >
         <Icon name="ChevronRight" size={28} className="group-hover:translate-x-1 transition-transform duration-300" />
@@ -216,7 +216,7 @@ const HeroSection = () => {
             Scroll
           </span>
           <div className="w-px h-12 bg-gradient-to-b from-accent to-transparent relative">
-            <div className="absolute top-0 w-full h-6 bg-gradient-to-b from-accent to-amber-400 animate-bounce" />
+            <div className="absolute top-0 w-full h-6 bg-gradient-to-b from-accent to-[#92b174] animate-bounce" />
           </div>
         </div>
       </div>
