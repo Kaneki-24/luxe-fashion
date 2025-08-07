@@ -42,13 +42,13 @@ const Homepage = () => {
 
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
             <div className="text-center mb-16">
-              <div className="inline-flex items-center px-6 py-3 rounded-full text-sm font-medium bg-gradient-to-r from-accent/20 to-amber-400/20 text-accent mb-6 backdrop-blur-sm border border-accent/20">
+              <div className="inline-flex items-center px-6 py-3 rounded-full text-sm font-medium bg-gradient-to-r from-accent/20 to-[#92b174]/20 text-accent mb-6 backdrop-blur-sm border border-accent/20">
                 <Icon name="Heart" size={18} className="mr-3" />
                 The 9tyTwo Story
               </div>
               <h2 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-foreground mb-8">
                 When Two Hearts with
-                <span className="bg-gradient-to-r from-accent to-amber-400 bg-clip-text text-transparent"> One Vision </span>
+                <span className="bg-gradient-to-r from-accent to-[#92b174] bg-clip-text text-transparent"> One Vision </span>
                 Come Together
               </h2>
               <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed mb-12">
@@ -91,7 +91,7 @@ const Homepage = () => {
                   </div>
                   <h2 className="text-4xl sm:text-5xl font-serif font-bold text-foreground mb-6">
                     A Shared Vision of
-                    <span className="bg-gradient-to-r from-accent to-amber-400 bg-clip-text text-transparent"> Modesty & Style</span>
+                    <span className="bg-gradient-to-r from-accent to-[#92b174] bg-clip-text text-transparent"> Modesty & Style</span>
                   </h2>
                 </div>
 
@@ -112,7 +112,7 @@ const Homepage = () => {
                       href="https://www.instagram.com/9tytwoofficial"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="group inline-flex items-center px-6 py-4 rounded-xl bg-gradient-to-r from-accent to-amber-400 text-black font-semibold hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                      className="group inline-flex items-center px-6 py-4 rounded-xl bg-gradient-to-r from-accent to-[#92b174] text-black font-semibold hover:shadow-xl transition-all duration-300 transform hover:scale-105"
                     >
                       <Icon name="Instagram" size={20} className="mr-3 group-hover:scale-110 transition-transform duration-300" />
                       Follow us on Instagram
@@ -132,7 +132,7 @@ const Homepage = () => {
 
               {/* Visual Element */}
               <div className="relative">
-                <div className="aspect-square rounded-3xl bg-gradient-to-br from-accent/20 to-amber-400/20 p-8 relative overflow-hidden">
+                <div className="aspect-square rounded-3xl bg-gradient-to-br from-accent/20 to-[#92b174]/20 p-8 relative overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-br from-accent/10 to-transparent"></div>
                   <div className="relative z-10 h-full flex flex-col justify-center items-center text-center space-y-6">
                     <div className="text-6xl font-bold text-accent">9tyTwo</div>
@@ -148,7 +148,7 @@ const Homepage = () => {
         </section>
 
         {/* Enhanced Values Section */}
-        <section className="py-24 bg-gradient-to-br from-muted/10 via-accent/5 to-amber-400/5 relative overflow-hidden">
+        <section className="py-24 bg-gradient-to-br from-muted/10 via-accent/5 to-[#92b174]/5 relative overflow-hidden">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <div className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-accent/10 text-accent mb-6">
@@ -157,14 +157,14 @@ const Homepage = () => {
               </div>
               <h2 className="text-4xl sm:text-5xl font-serif font-bold text-foreground mb-6">
                 Our Core
-                <span className="bg-gradient-to-r from-accent to-amber-400 bg-clip-text text-transparent"> Values</span>
+                <span className="bg-gradient-to-r from-accent to-[#92b174] bg-clip-text text-transparent"> Values</span>
               </h2>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="group bg-background rounded-2xl p-8 text-center shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-accent/10 hover:border-accent/30">
                 <div className="relative mb-6">
-                  <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-accent/20 to-amber-400/20 text-accent mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-accent/20 to-[#92b174]/20 text-accent mb-4 group-hover:scale-110 transition-transform duration-300">
                     <Icon name="Heart" size={32} />
                   </div>
                   <div className="absolute -inset-2 bg-gradient-to-r from-accent/20 to-transparent rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm"></div>
@@ -175,7 +175,7 @@ const Homepage = () => {
 
               <div className="group bg-background rounded-2xl p-8 text-center shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-accent/10 hover:border-accent/30">
                 <div className="relative mb-6">
-                  <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-accent/20 to-amber-400/20 text-accent mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-accent/20 to-[#92b174]/20 text-accent mb-4 group-hover:scale-110 transition-transform duration-300">
                     <Icon name="Users" size={32} />
                   </div>
                   <div className="absolute -inset-2 bg-gradient-to-r from-accent/20 to-transparent rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm"></div>
@@ -186,7 +186,7 @@ const Homepage = () => {
 
               <div className="group bg-background rounded-2xl p-8 text-center shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-accent/10 hover:border-accent/30">
                 <div className="relative mb-6">
-                  <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-accent/20 to-amber-400/20 text-accent mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-accent/20 to-[#92b174]/20 text-accent mb-4 group-hover:scale-110 transition-transform duration-300">
                     <Icon name="Sparkles" size={32} />
                   </div>
                   <div className="absolute -inset-2 bg-gradient-to-r from-accent/20 to-transparent rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm"></div>
