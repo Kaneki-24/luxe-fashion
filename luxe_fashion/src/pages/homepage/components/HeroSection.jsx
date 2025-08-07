@@ -195,7 +195,7 @@ const HeroSection = () => {
       {/* Arrow Controls - Hidden on mobile, visible on desktop */}
       <button
         onClick={prevSlide}
-        className="absolute left-6 top-1/2 transform -translate-y-1/2 z-20 w-14 h-14 bg-gradient-to-r from-accent/20 to-[#92b174]/20 backdrop-blur-md rounded-full items-center justify-center text-white hover:from-accent/30 hover:to-amber-400/30 transition-all duration-300 border border-white/20 group hidden md:flex"
+        className="absolute left-6 top-1/2 transform -translate-y-1/2 z-20 w-14 h-14 bg-gradient-to-r from-accent/20 to-[#92b174]/20 backdrop-blur-md rounded-full items-center justify-center text-white hover:from-accent/30 hover:to-[#92b174]/30 transition-all duration-300 border border-white/20 group hidden md:flex"
         aria-label="Previous slide"
       >
         <Icon name="ChevronLeft" size={28} className="group-hover:-translate-x-1 transition-transform duration-300" />
@@ -203,7 +203,7 @@ const HeroSection = () => {
 
       <button
         onClick={nextSlide}
-        className="absolute right-6 top-1/2 transform -translate-y-1/2 z-20 w-14 h-14 bg-gradient-to-r from-accent/20 to-[#92b174]/20 backdrop-blur-md rounded-full items-center justify-center text-white hover:from-accent/30 hover:to-amber-400/30 transition-all duration-300 border border-white/20 group hidden md:flex"
+        className="absolute right-6 top-1/2 transform -translate-y-1/2 z-20 w-14 h-14 bg-gradient-to-r from-accent/20 to-[#92b174]/20 backdrop-blur-md rounded-full items-center justify-center text-white hover:from-accent/30 hover:to-[#92b174]/30 transition-all duration-300 border border-white/20 group hidden md:flex"
         aria-label="Next slide"
       >
         <Icon name="ChevronRight" size={28} className="group-hover:translate-x-1 transition-transform duration-300" />
