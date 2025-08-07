@@ -140,7 +140,7 @@ const Homepage = () => {
                     <div className="text-lg text-muted-foreground max-w-xs">Where friendship meets fashion, and dreams become reality</div>
                   </div>
                   <div className="absolute top-4 right-4 w-20 h-20 bg-accent/10 rounded-full"></div>
-                  <div className="absolute bottom-4 left-4 w-16 h-16 bg-amber-400/10 rounded-full"></div>
+                  <div className="absolute bottom-4 left-4 w-16 h-16 bg-[#92b174]/10 rounded-full"></div>
                 </div>
               </div>
             </div>
@@ -199,7 +199,7 @@ const Homepage = () => {
         </section>
 
         {/* Call to Action Section */}
-        <section className="py-24 bg-gradient-to-r from-accent to-amber-400 relative overflow-hidden">
+        <section className="py-24 bg-gradient-to-r from-accent to-[#92b174] relative overflow-hidden">
           <div className="absolute inset-0 bg-black/10"></div>
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
             <div className="text-center text-black">
