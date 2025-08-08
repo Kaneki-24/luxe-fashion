@@ -140,7 +140,7 @@ const Homepage = () => {
                     <div className="text-lg text-muted-foreground max-w-xs">Where friendship meets fashion, and dreams become reality</div>
                   </div>
                   <div className="absolute top-4 right-4 w-20 h-20 bg-accent/10 rounded-full"></div>
-                  <div className="absolute bottom-4 left-4 w-16 h-16 bg-[#92b174]/10 rounded-full"></div>
+                  
                 </div>
               </div>
             </div>
