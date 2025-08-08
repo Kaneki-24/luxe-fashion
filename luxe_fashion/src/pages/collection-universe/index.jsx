@@ -423,15 +423,9 @@ Our commitment extends beyond just beautiful clothing – we believe in sustaina
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      
-      {/* Collection Hero */}
-      <CollectionHero collection={collectionData} />
-      
-      {/* Designer Spotlight */}
-      <DesignerSpotlight designer={designerData} />
-      
+
       {/* Main Content */}
-      <div className="flex">
+      <div className="relative">
         {/* Filter Sidebar */}
         <FilterSidebar
           isOpen={isFilterOpen}
@@ -439,9 +433,17 @@ Our commitment extends beyond just beautiful clothing – we believe in sustaina
           filters={filters}
           onFilterChange={handleFilterChange}
         />
-        
-        {/* Products Section */}
-        <div className="flex-1 lg:ml-80">
+
+        {/* Content Section with Sidebar Offset */}
+        <div className="lg:ml-80">
+          {/* Collection Hero */}
+          <CollectionHero collection={collectionData} />
+
+          {/* Designer Spotlight */}
+          <DesignerSpotlight designer={designerData} />
+
+          {/* Products Section */}
+          <div>
           {/* Sort and View Controls */}
           <SortAndView
             sortBy={sortBy}
@@ -451,22 +453,23 @@ Our commitment extends beyond just beautiful clothing – we believe in sustaina
             onFilterToggle={toggleFilter}
             totalProducts={filteredProducts.length}
           />
-          
+
           {/* Debug Section - Remove in production */}
-          
-          {/* Product Grid */}
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
-            <ProductGrid
-              products={filteredProducts}
-              viewMode={viewMode}
-              sortBy={sortBy}
-            />
+
+            {/* Product Grid */}
+            <div className="px-4 lg:px-6 pb-8">
+              <ProductGrid
+                products={filteredProducts}
+                viewMode={viewMode}
+                sortBy={sortBy}
+              />
+            </div>
           </div>
+
+          {/* Sustainability Info */}
+          <SustainabilityInfo />
         </div>
       </div>
-      
-      {/* Sustainability Info */}
-      <SustainabilityInfo />
     </div>
   );
 };
