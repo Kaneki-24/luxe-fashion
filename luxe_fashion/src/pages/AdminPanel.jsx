@@ -38,10 +38,34 @@ const AdminPanel = () => {
   const [adminForm, setAdminForm] = useState({ email: '', password: '' });
   const [adminLoading, setAdminLoading] = useState(false);
 
+  // Check admin authentication status on component mount
+  useEffect(() => {
+    checkAdminAuth();
+    // eslint-disable-next-line
+  }, []);
+
   useEffect(() => {
     if (isAdminLoggedIn) fetchProducts();
     // eslint-disable-next-line
   }, [isAdminLoggedIn]);
+
+  const checkAdminAuth = async () => {
+    try {
+      console.log('Checking admin authentication...');
+      const response = await apiFetch('/user/getadmin');
+      console.log('Admin auth response:', response);
+      if (response && response.role === 'admin') {
+        setIsAdminLoggedIn(true);
+        console.log('Admin authentication verified');
+      } else {
+        setIsAdminLoggedIn(false);
+        console.log('Admin authentication failed - invalid response');
+      }
+    } catch (error) {
+      console.log('Admin not authenticated:', error.message);
+      setIsAdminLoggedIn(false);
+    }
+  };
 
   const handleAdminLogin = async (e) => {
     e.preventDefault();
@@ -67,7 +91,14 @@ const AdminPanel = () => {
     }
   };
 
-  const handleAdminLogout = () => {
+  const handleAdminLogout = async () => {
+    try {
+      // Call backend logout to clear the cookie
+      await apiFetch('/auth/logout', { method: 'GET' });
+    } catch (error) {
+      console.error('Logout error:', error);
+    }
+
     setIsAdminLoggedIn(false);
     setAdminForm({ email: '', password: '' });
     setSuccess('');
@@ -208,18 +239,24 @@ const AdminPanel = () => {
         hasImage3: !!form.image3,
         hasImage4: !!form.image4
       });
-      
+
+      console.log('Admin logged in status:', isAdminLoggedIn);
+
       if (editProduct) {
-        await apiFetch(`/product/update/${editProduct._id || editProduct.id}`, {
+        console.log('Updating product:', editProduct._id || editProduct.id);
+        const response = await apiFetch(`/product/update/${editProduct._id || editProduct.id}`, {
           method: 'PUT',
           body,
         });
+        console.log('Update response:', response);
         setSuccess('Product updated');
       } else {
-        await apiFetch('/product/addproduct', {
+        console.log('Adding new product...');
+        const response = await apiFetch('/product/addproduct', {
           method: 'POST',
           body,
         });
+        console.log('Add product response:', response);
         setSuccess('Product added');
       }
       setShowForm(false);
@@ -332,8 +369,16 @@ const AdminPanel = () => {
       <main className="flex-1 flex flex-col items-center py-16 px-4">
         <div className="bg-card rounded-lg shadow-lg p-8 max-w-4xl w-full">
           <div className="flex justify-between items-center mb-6">
-            <h2 className="text-2xl font-serif font-semibold text-foreground">Admin Product Management</h2>
+            <div>
+              <h2 className="text-2xl font-serif font-semibold text-foreground">Admin Product Management</h2>
+              <div className="text-sm text-muted-foreground mt-1">
+                Status: <span className={isAdminLoggedIn ? "text-green-600" : "text-red-600"}>
+                  {isAdminLoggedIn ? "✅ Authenticated" : "❌ Not Authenticated"}
+                </span>
+              </div>
+            </div>
             <div className="flex gap-2">
+              <Button variant="secondary" onClick={checkAdminAuth}>Check Auth</Button>
               <Button variant="primary" onClick={handleAdd}>Add Product</Button>
               <Button variant="outline" onClick={handleAdminLogout}>Logout</Button>
             </div>
